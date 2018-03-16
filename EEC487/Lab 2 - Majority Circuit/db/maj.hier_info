@@ -1,0 +1,42 @@
+|maj
+v[0] => pass.IN0
+v[0] => tie.IN0
+v[0] => tie.IN0
+v[0] => fail.IN0
+v[0] => fail.IN0
+v[0] => tie.IN0
+v[1] => pass.IN0
+v[1] => tie.IN1
+v[1] => tie.IN1
+v[1] => fail.IN1
+v[1] => fail.IN0
+v[1] => tie.IN1
+v[2] => pass.IN1
+v[2] => pass.IN1
+v[2] => pass.IN1
+v[2] => tie.IN1
+v[2] => tie.IN1
+v[2] => tie.IN1
+v[2] => fail.IN1
+v[2] => fail.IN1
+v[2] => fail.IN1
+v[2] => tie.IN1
+v[2] => tie.IN1
+v[2] => tie.IN1
+v[3] => pass.IN1
+v[3] => pass.IN1
+v[3] => pass.IN1
+v[3] => tie.IN1
+v[3] => tie.IN1
+v[3] => tie.IN1
+v[3] => fail.IN1
+v[3] => fail.IN1
+v[3] => fail.IN1
+v[3] => tie.IN1
+v[3] => tie.IN1
+v[3] => tie.IN1
+fail <= fail.DB_MAX_OUTPUT_PORT_TYPE
+tie <= tie.DB_MAX_OUTPUT_PORT_TYPE
+pass <= pass.DB_MAX_OUTPUT_PORT_TYPE
+
+

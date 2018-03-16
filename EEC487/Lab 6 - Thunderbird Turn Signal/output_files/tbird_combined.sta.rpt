@@ -1,0 +1,1325 @@
+TimeQuest Timing Analyzer report for tbird_combined
+Wed Oct 28 15:06:24 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Setup: 'haz'
+ 13. Slow Model Hold: 'haz'
+ 14. Slow Model Hold: 'clk'
+ 15. Slow Model Minimum Pulse Width: 'clk'
+ 16. Slow Model Minimum Pulse Width: 'haz'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'clk'
+ 27. Fast Model Setup: 'haz'
+ 28. Fast Model Hold: 'haz'
+ 29. Fast Model Hold: 'clk'
+ 30. Fast Model Minimum Pulse Width: 'clk'
+ 31. Fast Model Minimum Pulse Width: 'haz'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; tbird_combined                                                    ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
+; haz        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { haz } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 243.37 MHz ; 243.37 MHz      ; clk        ;                                                               ;
+; 871.08 MHz ; 380.08 MHz      ; haz        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -3.226 ; -77.008       ;
+; haz   ; -0.074 ; -0.135        ;
++-------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; haz   ; -0.806 ; -3.691        ;
+; clk   ; 0.866  ; 0.000         ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -41.957               ;
+; haz   ; -1.631 ; -1.631                ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.226 ; tbird_fsm:fsm_block|state_next.s6_171 ; tbird_fsm:fsm_block|state_reg.s6      ; haz          ; clk         ; 0.500        ; -3.668     ; 0.096      ;
+; -3.224 ; tbird_fsm:fsm_block|state_next.s5_184 ; tbird_fsm:fsm_block|state_reg.s5      ; haz          ; clk         ; 0.500        ; -3.666     ; 0.096      ;
+; -3.218 ; tbird_fsm:fsm_block|state_next.s3_207 ; tbird_fsm:fsm_block|state_reg.s3      ; haz          ; clk         ; 0.500        ; -3.660     ; 0.096      ;
+; -3.216 ; tbird_fsm:fsm_block|state_next.s2_220 ; tbird_fsm:fsm_block|state_reg.s2      ; haz          ; clk         ; 0.500        ; -3.658     ; 0.096      ;
+; -3.185 ; tbird_fsm:fsm_block|state_next.s0_243 ; tbird_fsm:fsm_block|state_reg.s0      ; haz          ; clk         ; 0.500        ; -3.151     ; 0.572      ;
+; -3.109 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; -0.001     ; 4.146      ;
+; -3.064 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; -0.001     ; 4.101      ;
+; -3.043 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 4.080      ;
+; -3.043 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 4.080      ;
+; -3.043 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 4.080      ;
+; -3.036 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.002      ; 4.076      ;
+; -3.036 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.002      ; 4.076      ;
+; -3.036 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.002      ; 4.076      ;
+; -2.984 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; -0.001     ; 4.021      ;
+; -2.970 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 4.007      ;
+; -2.970 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 4.007      ;
+; -2.970 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 4.007      ;
+; -2.970 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.002      ; 4.010      ;
+; -2.970 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.002      ; 4.010      ;
+; -2.970 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.002      ; 4.010      ;
+; -2.957 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.994      ;
+; -2.957 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.994      ;
+; -2.957 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.994      ;
+; -2.908 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.946      ;
+; -2.908 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.946      ;
+; -2.908 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.946      ;
+; -2.903 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.938      ;
+; -2.876 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; -0.001     ; 3.913      ;
+; -2.860 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[16] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.895      ;
+; -2.858 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.893      ;
+; -2.827 ; tbird_counter:counter_block|t_reg[15] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.867      ;
+; -2.827 ; tbird_counter:counter_block|t_reg[15] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.867      ;
+; -2.827 ; tbird_counter:counter_block|t_reg[15] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.867      ;
+; -2.815 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[16] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.850      ;
+; -2.793 ; tbird_counter:counter_block|t_reg[8]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.831      ;
+; -2.793 ; tbird_counter:counter_block|t_reg[8]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.831      ;
+; -2.793 ; tbird_counter:counter_block|t_reg[8]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.831      ;
+; -2.778 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.813      ;
+; -2.774 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.811      ;
+; -2.774 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.811      ;
+; -2.774 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.811      ;
+; -2.774 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.811      ;
+; -2.773 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.808      ;
+; -2.767 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.807      ;
+; -2.767 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.807      ;
+; -2.767 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.807      ;
+; -2.767 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.807      ;
+; -2.763 ; tbird_counter:counter_block|t_reg[23] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.803      ;
+; -2.763 ; tbird_counter:counter_block|t_reg[23] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.803      ;
+; -2.763 ; tbird_counter:counter_block|t_reg[23] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.803      ;
+; -2.763 ; tbird_counter:counter_block|t_reg[9]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.801      ;
+; -2.763 ; tbird_counter:counter_block|t_reg[9]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.801      ;
+; -2.763 ; tbird_counter:counter_block|t_reg[9]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.801      ;
+; -2.759 ; tbird_counter:counter_block|t_reg[5]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.794      ;
+; -2.752 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.790      ;
+; -2.737 ; tbird_counter:counter_block|t_reg[10] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.775      ;
+; -2.737 ; tbird_counter:counter_block|t_reg[10] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.775      ;
+; -2.737 ; tbird_counter:counter_block|t_reg[10] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.775      ;
+; -2.735 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[16] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.770      ;
+; -2.728 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.763      ;
+; -2.724 ; tbird_counter:counter_block|t_reg[4]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; -0.001     ; 3.761      ;
+; -2.724 ; tbird_counter:counter_block|t_reg[19] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.764      ;
+; -2.724 ; tbird_counter:counter_block|t_reg[19] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.764      ;
+; -2.724 ; tbird_counter:counter_block|t_reg[19] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.764      ;
+; -2.701 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.738      ;
+; -2.701 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.738      ;
+; -2.701 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.738      ;
+; -2.701 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.738      ;
+; -2.701 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.741      ;
+; -2.701 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.741      ;
+; -2.701 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.741      ;
+; -2.701 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.741      ;
+; -2.696 ; tbird_counter:counter_block|t_reg[7]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.734      ;
+; -2.693 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.728      ;
+; -2.688 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.725      ;
+; -2.688 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.725      ;
+; -2.688 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.725      ;
+; -2.688 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; -0.001     ; 3.725      ;
+; -2.686 ; tbird_counter:counter_block|t_reg[6]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.721      ;
+; -2.686 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.724      ;
+; -2.684 ; tbird_counter:counter_block|t_reg[16] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.724      ;
+; -2.684 ; tbird_counter:counter_block|t_reg[16] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.724      ;
+; -2.684 ; tbird_counter:counter_block|t_reg[16] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.724      ;
+; -2.673 ; tbird_counter:counter_block|t_reg[4]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.708      ;
+; -2.670 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.705      ;
+; -2.652 ; tbird_counter:counter_block|t_reg[17] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.692      ;
+; -2.652 ; tbird_counter:counter_block|t_reg[17] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.692      ;
+; -2.652 ; tbird_counter:counter_block|t_reg[17] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.692      ;
+; -2.648 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.683      ;
+; -2.648 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.683      ;
+; -2.643 ; tbird_counter:counter_block|t_reg[20] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.683      ;
+; -2.643 ; tbird_counter:counter_block|t_reg[20] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.683      ;
+; -2.643 ; tbird_counter:counter_block|t_reg[20] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.002      ; 3.683      ;
+; -2.641 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[6]  ; clk          ; clk         ; 1.000        ; 0.003      ; 3.682      ;
+; -2.640 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[0]  ; clk          ; clk         ; 1.000        ; 0.003      ; 3.681      ;
+; -2.639 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.677      ;
+; -2.639 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.677      ;
+; -2.639 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.677      ;
+; -2.639 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.677      ;
+; -2.632 ; tbird_counter:counter_block|t_reg[8]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.670      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'haz'                                                                                                                                 ;
++--------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.074 ; haz                              ; tbird_fsm:fsm_block|state_next.s2_220 ; haz          ; haz         ; 0.500        ; 6.563      ; 5.812      ;
+; -0.037 ; haz                              ; tbird_fsm:fsm_block|state_next.s6_171 ; haz          ; haz         ; 0.500        ; 6.573      ; 5.806      ;
+; -0.024 ; haz                              ; tbird_fsm:fsm_block|state_next.s5_184 ; haz          ; haz         ; 0.500        ; 6.571      ; 5.873      ;
+; 0.032  ; tbird_fsm:fsm_block|state_reg.s7 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 3.665      ; 3.091      ;
+; 0.042  ; tbird_fsm:fsm_block|state_reg.s4 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 3.665      ; 3.081      ;
+; 0.049  ; tbird_fsm:fsm_block|state_reg.s1 ; tbird_fsm:fsm_block|state_next.s2_220 ; clk          ; haz         ; 0.500        ; 3.658      ; 2.784      ;
+; 0.133  ; tbird_fsm:fsm_block|state_reg.s6 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 3.665      ; 2.990      ;
+; 0.264  ; haz                              ; tbird_fsm:fsm_block|state_next.s0_243 ; haz          ; haz         ; 0.500        ; 6.570      ; 5.764      ;
+; 0.301  ; tbird_fsm:fsm_block|state_reg.s5 ; tbird_fsm:fsm_block|state_next.s6_171 ; clk          ; haz         ; 0.500        ; 3.668      ; 2.563      ;
+; 0.343  ; tbird_fsm:fsm_block|state_reg.s5 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 3.665      ; 2.780      ;
+; 0.361  ; tbird_fsm:fsm_block|state_reg.s4 ; tbird_fsm:fsm_block|state_next.s5_184 ; clk          ; haz         ; 0.500        ; 3.666      ; 2.583      ;
+; 0.373  ; haz                              ; tbird_fsm:fsm_block|state_next.s3_207 ; haz          ; haz         ; 0.500        ; 6.565      ; 5.896      ;
+; 0.426  ; haz                              ; tbird_fsm:fsm_block|state_next.s2_220 ; haz          ; haz         ; 1.000        ; 6.563      ; 5.812      ;
+; 0.463  ; haz                              ; tbird_fsm:fsm_block|state_next.s6_171 ; haz          ; haz         ; 1.000        ; 6.573      ; 5.806      ;
+; 0.476  ; haz                              ; tbird_fsm:fsm_block|state_next.s5_184 ; haz          ; haz         ; 1.000        ; 6.571      ; 5.873      ;
+; 0.514  ; tbird_fsm:fsm_block|state_reg.s2 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 3.665      ; 2.609      ;
+; 0.569  ; tbird_fsm:fsm_block|state_reg.s2 ; tbird_fsm:fsm_block|state_next.s3_207 ; clk          ; haz         ; 0.500        ; 3.660      ; 2.795      ;
+; 0.572  ; tbird_fsm:fsm_block|state_reg.s1 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 3.665      ; 2.551      ;
+; 0.585  ; tbird_fsm:fsm_block|state_reg.s3 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 3.665      ; 2.538      ;
+; 0.764  ; haz                              ; tbird_fsm:fsm_block|state_next.s0_243 ; haz          ; haz         ; 1.000        ; 6.570      ; 5.764      ;
+; 0.873  ; haz                              ; tbird_fsm:fsm_block|state_next.s3_207 ; haz          ; haz         ; 1.000        ; 6.565      ; 5.896      ;
++--------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'haz'                                                                                                                                  ;
++--------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.806 ; haz                              ; tbird_fsm:fsm_block|state_next.s0_243 ; haz          ; haz         ; 0.000        ; 6.570      ; 5.764      ;
+; -0.767 ; haz                              ; tbird_fsm:fsm_block|state_next.s6_171 ; haz          ; haz         ; 0.000        ; 6.573      ; 5.806      ;
+; -0.751 ; haz                              ; tbird_fsm:fsm_block|state_next.s2_220 ; haz          ; haz         ; 0.000        ; 6.563      ; 5.812      ;
+; -0.698 ; haz                              ; tbird_fsm:fsm_block|state_next.s5_184 ; haz          ; haz         ; 0.000        ; 6.571      ; 5.873      ;
+; -0.669 ; haz                              ; tbird_fsm:fsm_block|state_next.s3_207 ; haz          ; haz         ; 0.000        ; 6.565      ; 5.896      ;
+; -0.627 ; tbird_fsm:fsm_block|state_reg.s3 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 3.665      ; 2.538      ;
+; -0.614 ; tbird_fsm:fsm_block|state_reg.s1 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 3.665      ; 2.551      ;
+; -0.605 ; tbird_fsm:fsm_block|state_reg.s5 ; tbird_fsm:fsm_block|state_next.s6_171 ; clk          ; haz         ; -0.500       ; 3.668      ; 2.563      ;
+; -0.583 ; tbird_fsm:fsm_block|state_reg.s4 ; tbird_fsm:fsm_block|state_next.s5_184 ; clk          ; haz         ; -0.500       ; 3.666      ; 2.583      ;
+; -0.556 ; tbird_fsm:fsm_block|state_reg.s2 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 3.665      ; 2.609      ;
+; -0.385 ; tbird_fsm:fsm_block|state_reg.s5 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 3.665      ; 2.780      ;
+; -0.374 ; tbird_fsm:fsm_block|state_reg.s1 ; tbird_fsm:fsm_block|state_next.s2_220 ; clk          ; haz         ; -0.500       ; 3.658      ; 2.784      ;
+; -0.365 ; tbird_fsm:fsm_block|state_reg.s2 ; tbird_fsm:fsm_block|state_next.s3_207 ; clk          ; haz         ; -0.500       ; 3.660      ; 2.795      ;
+; -0.306 ; haz                              ; tbird_fsm:fsm_block|state_next.s0_243 ; haz          ; haz         ; -0.500       ; 6.570      ; 5.764      ;
+; -0.267 ; haz                              ; tbird_fsm:fsm_block|state_next.s6_171 ; haz          ; haz         ; -0.500       ; 6.573      ; 5.806      ;
+; -0.251 ; haz                              ; tbird_fsm:fsm_block|state_next.s2_220 ; haz          ; haz         ; -0.500       ; 6.563      ; 5.812      ;
+; -0.198 ; haz                              ; tbird_fsm:fsm_block|state_next.s5_184 ; haz          ; haz         ; -0.500       ; 6.571      ; 5.873      ;
+; -0.175 ; tbird_fsm:fsm_block|state_reg.s6 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 3.665      ; 2.990      ;
+; -0.169 ; haz                              ; tbird_fsm:fsm_block|state_next.s3_207 ; haz          ; haz         ; -0.500       ; 6.565      ; 5.896      ;
+; -0.084 ; tbird_fsm:fsm_block|state_reg.s4 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 3.665      ; 3.081      ;
+; -0.074 ; tbird_fsm:fsm_block|state_reg.s7 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 3.665      ; 3.091      ;
++--------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.866 ; tbird_counter:counter_block|t_reg[24] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.152      ;
+; 0.968 ; tbird_counter:counter_block|t_reg[5]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.254      ;
+; 0.972 ; tbird_counter:counter_block|t_reg[21] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.258      ;
+; 0.972 ; tbird_counter:counter_block|t_reg[23] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.258      ;
+; 0.975 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.261      ;
+; 0.976 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[14] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.262      ;
+; 0.981 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.267      ;
+; 1.009 ; tbird_counter:counter_block|t_reg[4]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.295      ;
+; 1.011 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.011 ; tbird_counter:counter_block|t_reg[22] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.015 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.301      ;
+; 1.015 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.301      ;
+; 1.019 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.305      ;
+; 1.020 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.306      ;
+; 1.024 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.310      ;
+; 1.404 ; tbird_counter:counter_block|t_reg[23] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.690      ;
+; 1.404 ; tbird_counter:counter_block|t_reg[21] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.690      ;
+; 1.406 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.692      ;
+; 1.408 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.694      ;
+; 1.413 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.699      ;
+; 1.442 ; tbird_counter:counter_block|t_reg[4]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.728      ;
+; 1.444 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.730      ;
+; 1.444 ; tbird_counter:counter_block|t_reg[22] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.730      ;
+; 1.448 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.734      ;
+; 1.448 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.734      ;
+; 1.452 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.738      ;
+; 1.484 ; tbird_counter:counter_block|t_reg[21] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.770      ;
+; 1.486 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.772      ;
+; 1.487 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[14] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.773      ;
+; 1.493 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.779      ;
+; 1.503 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.786      ;
+; 1.511 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.797      ;
+; 1.514 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.800      ;
+; 1.524 ; tbird_counter:counter_block|t_reg[22] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.810      ;
+; 1.524 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.810      ;
+; 1.528 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.814      ;
+; 1.537 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.823      ;
+; 1.564 ; tbird_counter:counter_block|t_reg[21] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.850      ;
+; 1.567 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.853      ;
+; 1.568 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.854      ;
+; 1.573 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.859      ;
+; 1.591 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.877      ;
+; 1.594 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.880      ;
+; 1.602 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.888      ;
+; 1.604 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.890      ;
+; 1.613 ; tbird_counter:counter_block|t_reg[6]  ; tbird_counter:counter_block|t_reg[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.899      ;
+; 1.613 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.899      ;
+; 1.617 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.903      ;
+; 1.622 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.908      ;
+; 1.627 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.913      ;
+; 1.648 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.934      ;
+; 1.663 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[14] ; clk          ; clk         ; 0.000        ; -0.003     ; 1.946      ;
+; 1.666 ; tbird_counter:counter_block|t_reg[10] ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.953      ;
+; 1.671 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.957      ;
+; 1.684 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.970      ;
+; 1.702 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.988      ;
+; 1.702 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.988      ;
+; 1.706 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.992      ;
+; 1.707 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.993      ;
+; 1.727 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.013      ;
+; 1.734 ; tbird_counter:counter_block|t_reg[9]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.001      ; 2.021      ;
+; 1.738 ; tbird_counter:counter_block|t_reg[6]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.024      ;
+; 1.740 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.026      ;
+; 1.743 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[15] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.026      ;
+; 1.747 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.033      ;
+; 1.751 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.037      ;
+; 1.782 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.068      ;
+; 1.786 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.072      ;
+; 1.787 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.073      ;
+; 1.795 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[16] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.081      ;
+; 1.800 ; tbird_counter:counter_block|t_reg[5]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.086      ;
+; 1.807 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.093      ;
+; 1.820 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.106      ;
+; 1.827 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.113      ;
+; 1.830 ; tbird_counter:counter_block|t_reg[10] ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.114      ;
+; 1.830 ; tbird_counter:counter_block|t_reg[8]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.001      ; 2.117      ;
+; 1.831 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.117      ;
+; 1.858 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[7]  ; clk          ; clk         ; 0.000        ; -0.001     ; 2.143      ;
+; 1.866 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.152      ;
+; 1.867 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.153      ;
+; 1.871 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.157      ;
+; 1.894 ; tbird_counter:counter_block|t_reg[7]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.001      ; 2.181      ;
+; 1.898 ; tbird_counter:counter_block|t_reg[9]  ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.182      ;
+; 1.900 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.186      ;
+; 1.902 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.188      ;
+; 1.902 ; tbird_counter:counter_block|t_reg[6]  ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.185      ;
+; 1.903 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.186      ;
+; 1.922 ; tbird_counter:counter_block|t_reg[4]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.208      ;
+; 1.946 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.232      ;
+; 1.947 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.233      ;
+; 1.951 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.237      ;
+; 1.962 ; tbird_counter:counter_block|t_reg[8]  ; tbird_counter:counter_block|t_reg[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.248      ;
+; 1.964 ; tbird_counter:counter_block|t_reg[5]  ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.247      ;
+; 1.980 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.266      ;
+; 1.982 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.268      ;
+; 1.983 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; -0.003     ; 2.266      ;
+; 1.990 ; tbird_counter:counter_block|t_reg[10] ; tbird_counter:counter_block|t_reg[14] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.274      ;
+; 1.994 ; tbird_counter:counter_block|t_reg[8]  ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.002     ; 2.278      ;
+; 2.016 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[7]  ; clk          ; clk         ; 0.000        ; -0.001     ; 2.301      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                                   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[10] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[10] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[11] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[11] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[12] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[12] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[13] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[13] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[14] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[14] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[15] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[15] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[16] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[16] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[17] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[17] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[18] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[18] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[19] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[19] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[20] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[20] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[21] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[21] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[22] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[22] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[23] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[23] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[24] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[24] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[8]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[8]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[9]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[9]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s1      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s1      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s2      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s2      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s3      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s3      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s4      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s4      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s5      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s5      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s6      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s6      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s7      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s7      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[12]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[12]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[13]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[13]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[14]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[14]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[15]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[15]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[16]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[16]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[17]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[17]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[18]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[18]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[19]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[19]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[20]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[20]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[21]|clk           ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'haz'                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; haz   ; Rise       ; haz                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|Selector9~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|Selector9~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|Selector9~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|Selector9~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|Selector9~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|Selector9~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|Selector9~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|Selector9~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s0_243|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s0_243|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s2_220|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s2_220|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s3_207|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s3_207|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s5_184|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s5_184|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s6_171|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s6_171|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; haz|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; haz|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s0_243 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s0_243 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s2_220 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s2_220 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s3_207 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s3_207 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s5_184 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s5_184 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s6_171 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s6_171 ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; haz       ; haz        ; 0.574 ; 0.574 ; Fall       ; haz             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; haz       ; haz        ; 0.806 ; 0.806 ; Fall       ; haz             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; light[*]  ; clk        ; 10.771 ; 10.771 ; Rise       ; clk             ;
+;  light[0] ; clk        ; 9.025  ; 9.025  ; Rise       ; clk             ;
+;  light[1] ; clk        ; 9.500  ; 9.500  ; Rise       ; clk             ;
+;  light[2] ; clk        ; 10.768 ; 10.768 ; Rise       ; clk             ;
+;  light[3] ; clk        ; 10.771 ; 10.771 ; Rise       ; clk             ;
+;  light[4] ; clk        ; 10.644 ; 10.644 ; Rise       ; clk             ;
+;  light[5] ; clk        ; 10.107 ; 10.107 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; light[*]  ; clk        ; 8.924  ; 8.924  ; Rise       ; clk             ;
+;  light[0] ; clk        ; 8.924  ; 8.924  ; Rise       ; clk             ;
+;  light[1] ; clk        ; 9.371  ; 9.371  ; Rise       ; clk             ;
+;  light[2] ; clk        ; 10.046 ; 10.046 ; Rise       ; clk             ;
+;  light[3] ; clk        ; 10.133 ; 10.133 ; Rise       ; clk             ;
+;  light[4] ; clk        ; 9.750  ; 9.750  ; Rise       ; clk             ;
+;  light[5] ; clk        ; 9.673  ; 9.673  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -1.176 ; -14.581       ;
+; haz   ; 0.422  ; 0.000         ;
++-------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; haz   ; -0.726 ; -3.523        ;
+; clk   ; 0.328  ; 0.000         ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -34.380               ;
+; haz   ; -1.380 ; -1.380                ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.176 ; tbird_fsm:fsm_block|state_next.s0_243 ; tbird_fsm:fsm_block|state_reg.s0      ; haz          ; clk         ; 0.500        ; -1.477     ; 0.231      ;
+; -1.003 ; tbird_fsm:fsm_block|state_next.s6_171 ; tbird_fsm:fsm_block|state_reg.s6      ; haz          ; clk         ; 0.500        ; -1.493     ; 0.042      ;
+; -1.002 ; tbird_fsm:fsm_block|state_next.s5_184 ; tbird_fsm:fsm_block|state_reg.s5      ; haz          ; clk         ; 0.500        ; -1.492     ; 0.042      ;
+; -0.997 ; tbird_fsm:fsm_block|state_next.s3_207 ; tbird_fsm:fsm_block|state_reg.s3      ; haz          ; clk         ; 0.500        ; -1.487     ; 0.042      ;
+; -0.994 ; tbird_fsm:fsm_block|state_next.s2_220 ; tbird_fsm:fsm_block|state_reg.s2      ; haz          ; clk         ; 0.500        ; -1.484     ; 0.042      ;
+; -0.646 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.679      ;
+; -0.646 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.679      ;
+; -0.646 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.679      ;
+; -0.631 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.015      ; 1.678      ;
+; -0.627 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.659      ;
+; -0.610 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.641      ;
+; -0.610 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.641      ;
+; -0.610 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.641      ;
+; -0.610 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.641      ;
+; -0.610 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.641      ;
+; -0.610 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.641      ;
+; -0.609 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.639      ;
+; -0.606 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.639      ;
+; -0.606 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.639      ;
+; -0.606 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.639      ;
+; -0.603 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.634      ;
+; -0.603 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.634      ;
+; -0.603 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.634      ;
+; -0.602 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.634      ;
+; -0.601 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.631      ;
+; -0.595 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.013      ; 1.640      ;
+; -0.595 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.013      ; 1.640      ;
+; -0.591 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.015      ; 1.638      ;
+; -0.588 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.013      ; 1.633      ;
+; -0.584 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.614      ;
+; -0.576 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.606      ;
+; -0.569 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.600      ;
+; -0.569 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.600      ;
+; -0.569 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.600      ;
+; -0.567 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.599      ;
+; -0.566 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.557 ; tbird_counter:counter_block|t_reg[15] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.590      ;
+; -0.557 ; tbird_counter:counter_block|t_reg[15] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.590      ;
+; -0.557 ; tbird_counter:counter_block|t_reg[15] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.590      ;
+; -0.554 ; tbird_counter:counter_block|t_reg[7]  ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.013      ; 1.599      ;
+; -0.553 ; tbird_counter:counter_block|t_reg[19] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.586      ;
+; -0.553 ; tbird_counter:counter_block|t_reg[19] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.586      ;
+; -0.553 ; tbird_counter:counter_block|t_reg[19] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.586      ;
+; -0.552 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[16] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.582      ;
+; -0.549 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.579      ;
+; -0.542 ; tbird_counter:counter_block|t_reg[15] ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.015      ; 1.589      ;
+; -0.541 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; 0.002      ; 1.575      ;
+; -0.541 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; 0.002      ; 1.575      ;
+; -0.541 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; 0.002      ; 1.575      ;
+; -0.541 ; tbird_counter:counter_block|t_reg[12] ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; 0.002      ; 1.575      ;
+; -0.541 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.571      ;
+; -0.541 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.571      ;
+; -0.538 ; tbird_counter:counter_block|t_reg[19] ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.015      ; 1.585      ;
+; -0.537 ; tbird_counter:counter_block|t_reg[9]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.568      ;
+; -0.537 ; tbird_counter:counter_block|t_reg[9]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.568      ;
+; -0.537 ; tbird_counter:counter_block|t_reg[9]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.568      ;
+; -0.535 ; tbird_counter:counter_block|t_reg[17] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.568      ;
+; -0.535 ; tbird_counter:counter_block|t_reg[17] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.568      ;
+; -0.535 ; tbird_counter:counter_block|t_reg[17] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.568      ;
+; -0.531 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.561      ;
+; -0.527 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[16] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.557      ;
+; -0.525 ; tbird_counter:counter_block|t_reg[8]  ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.556      ;
+; -0.525 ; tbird_counter:counter_block|t_reg[8]  ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.556      ;
+; -0.525 ; tbird_counter:counter_block|t_reg[8]  ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.556      ;
+; -0.522 ; tbird_counter:counter_block|t_reg[9]  ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.013      ; 1.567      ;
+; -0.520 ; tbird_counter:counter_block|t_reg[17] ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.015      ; 1.567      ;
+; -0.518 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.550      ;
+; -0.517 ; tbird_counter:counter_block|t_reg[23] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.550      ;
+; -0.517 ; tbird_counter:counter_block|t_reg[23] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.550      ;
+; -0.517 ; tbird_counter:counter_block|t_reg[23] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.550      ;
+; -0.516 ; tbird_counter:counter_block|t_reg[16] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.549      ;
+; -0.516 ; tbird_counter:counter_block|t_reg[16] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.549      ;
+; -0.516 ; tbird_counter:counter_block|t_reg[16] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.549      ;
+; -0.510 ; tbird_counter:counter_block|t_reg[8]  ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.013      ; 1.555      ;
+; -0.506 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.536      ;
+; -0.506 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.536      ;
+; -0.505 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.537      ;
+; -0.505 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.537      ;
+; -0.505 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.537      ;
+; -0.505 ; tbird_counter:counter_block|t_reg[4]  ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.537      ;
+; -0.505 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.537      ;
+; -0.505 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.537      ;
+; -0.505 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.537      ;
+; -0.505 ; tbird_counter:counter_block|t_reg[5]  ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.537      ;
+; -0.504 ; tbird_counter:counter_block|t_reg[10] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.535      ;
+; -0.504 ; tbird_counter:counter_block|t_reg[10] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.535      ;
+; -0.504 ; tbird_counter:counter_block|t_reg[10] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.535      ;
+; -0.504 ; tbird_counter:counter_block|t_reg[20] ; tbird_fsm:fsm_block|state_reg.s1      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.537      ;
+; -0.504 ; tbird_counter:counter_block|t_reg[20] ; tbird_fsm:fsm_block|state_reg.s5      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.537      ;
+; -0.504 ; tbird_counter:counter_block|t_reg[20] ; tbird_fsm:fsm_block|state_reg.s6      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.537      ;
+; -0.502 ; tbird_counter:counter_block|t_reg[23] ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.015      ; 1.549      ;
+; -0.501 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; 0.002      ; 1.535      ;
+; -0.501 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; 0.002      ; 1.535      ;
+; -0.501 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; 0.002      ; 1.535      ;
+; -0.501 ; tbird_counter:counter_block|t_reg[14] ; tbird_fsm:fsm_block|state_reg.s7      ; clk          ; clk         ; 1.000        ; 0.002      ; 1.535      ;
+; -0.501 ; tbird_counter:counter_block|t_reg[16] ; tbird_fsm:fsm_block|state_reg.s0      ; clk          ; clk         ; 1.000        ; 0.015      ; 1.548      ;
+; -0.500 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.530      ;
+; -0.498 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s2      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s4      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.530      ;
+; -0.498 ; tbird_counter:counter_block|t_reg[6]  ; tbird_fsm:fsm_block|state_reg.s3      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.530      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'haz'                                                                                                                                ;
++-------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.422 ; tbird_fsm:fsm_block|state_reg.s1 ; tbird_fsm:fsm_block|state_next.s2_220 ; clk          ; haz         ; 0.500        ; 1.485      ; 1.077      ;
+; 0.458 ; tbird_fsm:fsm_block|state_reg.s7 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 1.490      ; 1.178      ;
+; 0.463 ; tbird_fsm:fsm_block|state_reg.s4 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 1.490      ; 1.173      ;
+; 0.498 ; tbird_fsm:fsm_block|state_reg.s6 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 1.491      ; 1.139      ;
+; 0.536 ; tbird_fsm:fsm_block|state_reg.s5 ; tbird_fsm:fsm_block|state_next.s6_171 ; clk          ; haz         ; 0.500        ; 1.493      ; 1.003      ;
+; 0.559 ; tbird_fsm:fsm_block|state_reg.s4 ; tbird_fsm:fsm_block|state_next.s5_184 ; clk          ; haz         ; 0.500        ; 1.491      ; 1.010      ;
+; 0.570 ; tbird_fsm:fsm_block|state_reg.s5 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 1.491      ; 1.067      ;
+; 0.616 ; tbird_fsm:fsm_block|state_reg.s2 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 1.490      ; 1.020      ;
+; 0.631 ; tbird_fsm:fsm_block|state_reg.s1 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 1.491      ; 1.006      ;
+; 0.655 ; tbird_fsm:fsm_block|state_reg.s3 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; 0.500        ; 1.490      ; 0.981      ;
+; 0.665 ; tbird_fsm:fsm_block|state_reg.s2 ; tbird_fsm:fsm_block|state_next.s3_207 ; clk          ; haz         ; 0.500        ; 1.487      ; 1.051      ;
+; 0.728 ; haz                              ; tbird_fsm:fsm_block|state_next.s2_220 ; haz          ; haz         ; 0.500        ; 3.125      ; 2.411      ;
+; 0.758 ; haz                              ; tbird_fsm:fsm_block|state_next.s5_184 ; haz          ; haz         ; 0.500        ; 3.132      ; 2.452      ;
+; 0.772 ; haz                              ; tbird_fsm:fsm_block|state_next.s6_171 ; haz          ; haz         ; 0.500        ; 3.133      ; 2.407      ;
+; 0.868 ; haz                              ; tbird_fsm:fsm_block|state_next.s0_243 ; haz          ; haz         ; 0.500        ; 3.131      ; 2.409      ;
+; 0.910 ; haz                              ; tbird_fsm:fsm_block|state_next.s3_207 ; haz          ; haz         ; 0.500        ; 3.128      ; 2.447      ;
+; 1.228 ; haz                              ; tbird_fsm:fsm_block|state_next.s2_220 ; haz          ; haz         ; 1.000        ; 3.125      ; 2.411      ;
+; 1.258 ; haz                              ; tbird_fsm:fsm_block|state_next.s5_184 ; haz          ; haz         ; 1.000        ; 3.132      ; 2.452      ;
+; 1.272 ; haz                              ; tbird_fsm:fsm_block|state_next.s6_171 ; haz          ; haz         ; 1.000        ; 3.133      ; 2.407      ;
+; 1.368 ; haz                              ; tbird_fsm:fsm_block|state_next.s0_243 ; haz          ; haz         ; 1.000        ; 3.131      ; 2.409      ;
+; 1.410 ; haz                              ; tbird_fsm:fsm_block|state_next.s3_207 ; haz          ; haz         ; 1.000        ; 3.128      ; 2.447      ;
++-------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'haz'                                                                                                                                  ;
++--------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.726 ; haz                              ; tbird_fsm:fsm_block|state_next.s6_171 ; haz          ; haz         ; 0.000        ; 3.133      ; 2.407      ;
+; -0.722 ; haz                              ; tbird_fsm:fsm_block|state_next.s0_243 ; haz          ; haz         ; 0.000        ; 3.131      ; 2.409      ;
+; -0.714 ; haz                              ; tbird_fsm:fsm_block|state_next.s2_220 ; haz          ; haz         ; 0.000        ; 3.125      ; 2.411      ;
+; -0.681 ; haz                              ; tbird_fsm:fsm_block|state_next.s3_207 ; haz          ; haz         ; 0.000        ; 3.128      ; 2.447      ;
+; -0.680 ; haz                              ; tbird_fsm:fsm_block|state_next.s5_184 ; haz          ; haz         ; 0.000        ; 3.132      ; 2.452      ;
+; -0.226 ; haz                              ; tbird_fsm:fsm_block|state_next.s6_171 ; haz          ; haz         ; -0.500       ; 3.133      ; 2.407      ;
+; -0.222 ; haz                              ; tbird_fsm:fsm_block|state_next.s0_243 ; haz          ; haz         ; -0.500       ; 3.131      ; 2.409      ;
+; -0.214 ; haz                              ; tbird_fsm:fsm_block|state_next.s2_220 ; haz          ; haz         ; -0.500       ; 3.125      ; 2.411      ;
+; -0.181 ; haz                              ; tbird_fsm:fsm_block|state_next.s3_207 ; haz          ; haz         ; -0.500       ; 3.128      ; 2.447      ;
+; -0.180 ; haz                              ; tbird_fsm:fsm_block|state_next.s5_184 ; haz          ; haz         ; -0.500       ; 3.132      ; 2.452      ;
+; -0.009 ; tbird_fsm:fsm_block|state_reg.s3 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 1.490      ; 0.981      ;
+; 0.010  ; tbird_fsm:fsm_block|state_reg.s5 ; tbird_fsm:fsm_block|state_next.s6_171 ; clk          ; haz         ; -0.500       ; 1.493      ; 1.003      ;
+; 0.015  ; tbird_fsm:fsm_block|state_reg.s1 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 1.491      ; 1.006      ;
+; 0.019  ; tbird_fsm:fsm_block|state_reg.s4 ; tbird_fsm:fsm_block|state_next.s5_184 ; clk          ; haz         ; -0.500       ; 1.491      ; 1.010      ;
+; 0.030  ; tbird_fsm:fsm_block|state_reg.s2 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 1.490      ; 1.020      ;
+; 0.064  ; tbird_fsm:fsm_block|state_reg.s2 ; tbird_fsm:fsm_block|state_next.s3_207 ; clk          ; haz         ; -0.500       ; 1.487      ; 1.051      ;
+; 0.076  ; tbird_fsm:fsm_block|state_reg.s5 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 1.491      ; 1.067      ;
+; 0.092  ; tbird_fsm:fsm_block|state_reg.s1 ; tbird_fsm:fsm_block|state_next.s2_220 ; clk          ; haz         ; -0.500       ; 1.485      ; 1.077      ;
+; 0.148  ; tbird_fsm:fsm_block|state_reg.s6 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 1.491      ; 1.139      ;
+; 0.183  ; tbird_fsm:fsm_block|state_reg.s4 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 1.490      ; 1.173      ;
+; 0.188  ; tbird_fsm:fsm_block|state_reg.s7 ; tbird_fsm:fsm_block|state_next.s0_243 ; clk          ; haz         ; -0.500       ; 1.490      ; 1.178      ;
++--------+----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.328 ; tbird_counter:counter_block|t_reg[24] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.480      ;
+; 0.356 ; tbird_counter:counter_block|t_reg[5]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; tbird_counter:counter_block|t_reg[21] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; tbird_counter:counter_block|t_reg[23] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[14] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.366 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.369 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; tbird_counter:counter_block|t_reg[22] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370 ; tbird_counter:counter_block|t_reg[4]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.522      ;
+; 0.374 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.376 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.496 ; tbird_counter:counter_block|t_reg[23] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496 ; tbird_counter:counter_block|t_reg[21] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.498 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.501 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.653      ;
+; 0.504 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.656      ;
+; 0.509 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; tbird_counter:counter_block|t_reg[22] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.510 ; tbird_counter:counter_block|t_reg[4]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.662      ;
+; 0.514 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.666      ;
+; 0.516 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.531 ; tbird_counter:counter_block|t_reg[21] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[14] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.684      ;
+; 0.536 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.688      ;
+; 0.539 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.691      ;
+; 0.544 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.694      ;
+; 0.544 ; tbird_counter:counter_block|t_reg[22] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.549 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.701      ;
+; 0.551 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.555 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.707      ;
+; 0.559 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.711      ;
+; 0.566 ; tbird_counter:counter_block|t_reg[21] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.574 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.726      ;
+; 0.579 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.586 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.738      ;
+; 0.588 ; tbird_counter:counter_block|t_reg[10] ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.740      ;
+; 0.590 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.742      ;
+; 0.594 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.746      ;
+; 0.603 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.604 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.756      ;
+; 0.608 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.760      ;
+; 0.610 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.762      ;
+; 0.612 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.764      ;
+; 0.614 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[14] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.764      ;
+; 0.614 ; tbird_counter:counter_block|t_reg[20] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.766      ;
+; 0.616 ; tbird_counter:counter_block|t_reg[6]  ; tbird_counter:counter_block|t_reg[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.768      ;
+; 0.625 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.777      ;
+; 0.625 ; tbird_counter:counter_block|t_reg[9]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.777      ;
+; 0.637 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.789      ;
+; 0.643 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.643 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.645 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.645 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.648 ; tbird_counter:counter_block|t_reg[6]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.649 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[15] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.799      ;
+; 0.653 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[16] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.660 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.812      ;
+; 0.660 ; tbird_counter:counter_block|t_reg[8]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.812      ;
+; 0.665 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.817      ;
+; 0.668 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.820      ;
+; 0.669 ; tbird_counter:counter_block|t_reg[5]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.821      ;
+; 0.672 ; tbird_counter:counter_block|t_reg[12] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.824      ;
+; 0.677 ; tbird_counter:counter_block|t_reg[10] ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.827      ;
+; 0.678 ; tbird_counter:counter_block|t_reg[1]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.830      ;
+; 0.680 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.832      ;
+; 0.680 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.832      ;
+; 0.688 ; tbird_counter:counter_block|t_reg[2]  ; tbird_counter:counter_block|t_reg[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.840      ;
+; 0.695 ; tbird_counter:counter_block|t_reg[19] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.847      ;
+; 0.696 ; tbird_counter:counter_block|t_reg[7]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.848      ;
+; 0.700 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.852      ;
+; 0.703 ; tbird_counter:counter_block|t_reg[0]  ; tbird_counter:counter_block|t_reg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.855      ;
+; 0.709 ; tbird_counter:counter_block|t_reg[8]  ; tbird_counter:counter_block|t_reg[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.861      ;
+; 0.714 ; tbird_counter:counter_block|t_reg[9]  ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.864      ;
+; 0.715 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.867      ;
+; 0.715 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.867      ;
+; 0.715 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.867      ;
+; 0.719 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[17] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.869      ;
+; 0.720 ; tbird_counter:counter_block|t_reg[4]  ; tbird_counter:counter_block|t_reg[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.872      ;
+; 0.732 ; tbird_counter:counter_block|t_reg[14] ; tbird_counter:counter_block|t_reg[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.735 ; tbird_counter:counter_block|t_reg[16] ; tbird_counter:counter_block|t_reg[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.887      ;
+; 0.737 ; tbird_counter:counter_block|t_reg[6]  ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.887      ;
+; 0.740 ; tbird_counter:counter_block|t_reg[5]  ; tbird_counter:counter_block|t_reg[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.892      ;
+; 0.743 ; tbird_counter:counter_block|t_reg[3]  ; tbird_counter:counter_block|t_reg[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.895      ;
+; 0.747 ; tbird_counter:counter_block|t_reg[10] ; tbird_counter:counter_block|t_reg[14] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.897      ;
+; 0.749 ; tbird_counter:counter_block|t_reg[8]  ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.899      ;
+; 0.750 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750 ; tbird_counter:counter_block|t_reg[15] ; tbird_counter:counter_block|t_reg[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750 ; tbird_counter:counter_block|t_reg[17] ; tbird_counter:counter_block|t_reg[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.902      ;
+; 0.754 ; tbird_counter:counter_block|t_reg[11] ; tbird_counter:counter_block|t_reg[18] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.904      ;
+; 0.758 ; tbird_counter:counter_block|t_reg[18] ; tbird_counter:counter_block|t_reg[19] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.910      ;
+; 0.758 ; tbird_counter:counter_block|t_reg[5]  ; tbird_counter:counter_block|t_reg[12] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.908      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_counter:counter_block|t_reg[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s1      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s1      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s2      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s2      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s3      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s3      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s4      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s4      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s5      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s5      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s6      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s6      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s7      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; tbird_fsm:fsm_block|state_reg.s7      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[10]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[11]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[12]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[12]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[13]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[13]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[14]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[14]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[15]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[15]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[16]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[16]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[17]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[17]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[18]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[18]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[19]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[19]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[20]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; counter_block|t_reg[20]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; counter_block|t_reg[21]|clk           ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'haz'                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; haz   ; Rise       ; haz                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|Selector9~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|Selector9~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|Selector9~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|Selector9~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|Selector9~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|Selector9~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|Selector9~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|Selector9~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s0_243|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s0_243|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s2_220|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s2_220|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s3_207|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s3_207|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s5_184|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s5_184|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; fsm_block|state_next.s6_171|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; fsm_block|state_next.s6_171|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Rise       ; haz|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Rise       ; haz|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s0_243 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s0_243 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s2_220 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s2_220 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s3_207 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s3_207 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s5_184 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s5_184 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s6_171 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; haz   ; Fall       ; tbird_fsm:fsm_block|state_next.s6_171 ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; haz       ; haz        ; -0.228 ; -0.228 ; Fall       ; haz             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; haz       ; haz        ; 0.726 ; 0.726 ; Fall       ; haz             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; light[*]  ; clk        ; 5.063 ; 5.063 ; Rise       ; clk             ;
+;  light[0] ; clk        ; 4.336 ; 4.336 ; Rise       ; clk             ;
+;  light[1] ; clk        ; 4.506 ; 4.506 ; Rise       ; clk             ;
+;  light[2] ; clk        ; 4.894 ; 4.894 ; Rise       ; clk             ;
+;  light[3] ; clk        ; 4.861 ; 4.861 ; Rise       ; clk             ;
+;  light[4] ; clk        ; 5.063 ; 5.063 ; Rise       ; clk             ;
+;  light[5] ; clk        ; 4.792 ; 4.792 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; light[*]  ; clk        ; 4.296 ; 4.296 ; Rise       ; clk             ;
+;  light[0] ; clk        ; 4.296 ; 4.296 ; Rise       ; clk             ;
+;  light[1] ; clk        ; 4.478 ; 4.478 ; Rise       ; clk             ;
+;  light[2] ; clk        ; 4.767 ; 4.767 ; Rise       ; clk             ;
+;  light[3] ; clk        ; 4.807 ; 4.807 ; Rise       ; clk             ;
+;  light[4] ; clk        ; 4.751 ; 4.751 ; Rise       ; clk             ;
+;  light[5] ; clk        ; 4.671 ; 4.671 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -3.226  ; -0.806 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -3.226  ; 0.328  ; N/A      ; N/A     ; -1.631              ;
+;  haz             ; -0.074  ; -0.806 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -77.143 ; -3.691 ; 0.0      ; 0.0     ; -43.588             ;
+;  clk             ; -77.008 ; 0.000  ; N/A      ; N/A     ; -41.957             ;
+;  haz             ; -0.135  ; -3.691 ; N/A      ; N/A     ; -1.631              ;
++------------------+---------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; haz       ; haz        ; 0.574 ; 0.574 ; Fall       ; haz             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; haz       ; haz        ; 0.806 ; 0.806 ; Fall       ; haz             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; light[*]  ; clk        ; 10.771 ; 10.771 ; Rise       ; clk             ;
+;  light[0] ; clk        ; 9.025  ; 9.025  ; Rise       ; clk             ;
+;  light[1] ; clk        ; 9.500  ; 9.500  ; Rise       ; clk             ;
+;  light[2] ; clk        ; 10.768 ; 10.768 ; Rise       ; clk             ;
+;  light[3] ; clk        ; 10.771 ; 10.771 ; Rise       ; clk             ;
+;  light[4] ; clk        ; 10.644 ; 10.644 ; Rise       ; clk             ;
+;  light[5] ; clk        ; 10.107 ; 10.107 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; light[*]  ; clk        ; 4.296 ; 4.296 ; Rise       ; clk             ;
+;  light[0] ; clk        ; 4.296 ; 4.296 ; Rise       ; clk             ;
+;  light[1] ; clk        ; 4.478 ; 4.478 ; Rise       ; clk             ;
+;  light[2] ; clk        ; 4.767 ; 4.767 ; Rise       ; clk             ;
+;  light[3] ; clk        ; 4.807 ; 4.807 ; Rise       ; clk             ;
+;  light[4] ; clk        ; 4.751 ; 4.751 ; Rise       ; clk             ;
+;  light[5] ; clk        ; 4.671 ; 4.671 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 750      ; 0        ; 0        ; 0        ;
+; haz        ; clk      ; 0        ; 5        ; 0        ; 0        ;
+; clk        ; haz      ; 0        ; 0        ; 11       ; 0        ;
+; haz        ; haz      ; 0        ; 0        ; 5        ; 5        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 750      ; 0        ; 0        ; 0        ;
+; haz        ; clk      ; 0        ; 5        ; 0        ; 0        ;
+; clk        ; haz      ; 0        ; 0        ; 11       ; 0        ;
+; haz        ; haz      ; 0        ; 0        ; 5        ; 5        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 14    ; 14   ;
+; Unconstrained Output Ports      ; 6     ; 6    ;
+; Unconstrained Output Port Paths ; 18    ; 18   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Oct 28 15:06:23 2015
+Info: Command: quartus_sta Tbird -c tbird_combined
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 8 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'tbird_combined.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name haz haz
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.226
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.226       -77.008 clk 
+    Info (332119):    -0.074        -0.135 haz 
+Info (332146): Worst-case hold slack is -0.806
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.806        -3.691 haz 
+    Info (332119):     0.866         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -41.957 clk 
+    Info (332119):    -1.631        -1.631 haz 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.176
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.176       -14.581 clk 
+    Info (332119):     0.422         0.000 haz 
+Info (332146): Worst-case hold slack is -0.726
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.726        -3.523 haz 
+    Info (332119):     0.328         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -34.380 clk 
+    Info (332119):    -1.380        -1.380 haz 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 423 megabytes
+    Info: Processing ended: Wed Oct 28 15:06:24 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

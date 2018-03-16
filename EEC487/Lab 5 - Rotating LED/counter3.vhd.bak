@@ -1,0 +1,45 @@
+--**********************************************************
+-- Experiment 5 - 4.3(a)
+--	Author: C. A. Snyder
+--			  M. Bbela
+--			  B. Rutledge
+--	
+--	File:	counter2.vhd
+--
+--	Design units:
+--		ENTITY counter3
+--		ARCHITECTURE counter3_arch
+--
+--	Purpose: mod-8 counter; uses tick2 pulse
+--				can pause, count up, and count down
+--
+--
+--	Library/Package:
+--		ieee.std_logic_1164
+--		ieee.std_logic_unsigned
+--
+--	Software/Version:
+--		Simulated by: Altera Quartus v13.0
+--		Synthesized by: Altera Quartus v13.0
+--
+--	Revisiom History:
+--		Version 1.0:
+--		Date: 10/13/2015
+--		Comments: Original
+--**********************************************************
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.ALL;
+
+ENTITY counter3 IS 
+	PORT(
+		clk: IN std_logic;
+		tick2, cw, pa: std_logic;
+		q: out std_logic_vector(2 DOWNTO 0)
+	);
+END counter3;
+
+ARCHITECTURE counter3_arch IS
+
+END counter3_arch;

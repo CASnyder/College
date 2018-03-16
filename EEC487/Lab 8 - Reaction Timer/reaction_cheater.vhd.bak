@@ -1,0 +1,35 @@
+--**********************************************************
+-- Experiment 8 - 4.1(d)
+--	Author: C. A. Snyder
+--			  M. Bbela
+--			  B. Rutledge
+--	
+--	File:	reaction_rng.vhd
+--
+--	Design units:
+--		ENTITY reaction_cheater
+--		ARCHITECTURE cheater_arch
+--
+--	Purpose: check whether or not user is cheating 
+--
+--	Library/Package:
+--		ieee.std_logic_1164
+--		ieee.std_logic_unsigned
+--
+--
+--	Software/Version:
+--		Simulated by: Altera Quartus v13.0
+--		Synthesized by: Altera Quartus v13.0
+--
+--	Revisiom History:
+--		Version 1.0:
+--		Date: 11/10/2015
+--		Comments: Original
+--**********************************************************
+
+ENTITY reaction_cheater IS 
+	PORT( 
+		user_time, check_time : IN std_logic_vector(2 DOWNTO 0);
+		isCheater : OUT std_logic
+	);
+END reaction_cheater;

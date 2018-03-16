@@ -1,0 +1,110 @@
+|decoder
+clk => counter1:counter1_block.clk_c1
+clk => counter2:counter2_block.clk_c2
+clk => counter3:counter3_block.clk_c3
+pa => counter3:counter3_block.pa_c3
+cw => counter3:counter3_block.cw_c3
+sp[0] => counter2:counter2_block.sp_c2[0]
+sp[1] => counter2:counter2_block.sp_c2[1]
+hex3[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+hex3[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+hex3[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+hex3[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+hex3[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+hex3[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+hex3[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+hex2[0] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+hex2[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+hex2[2] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+hex2[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+hex2[4] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+hex2[5] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+hex2[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+hex1[0] <= Mux20.DB_MAX_OUTPUT_PORT_TYPE
+hex1[1] <= Mux19.DB_MAX_OUTPUT_PORT_TYPE
+hex1[2] <= Mux18.DB_MAX_OUTPUT_PORT_TYPE
+hex1[3] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
+hex1[4] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
+hex1[5] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+hex1[6] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+hex0[0] <= Mux27.DB_MAX_OUTPUT_PORT_TYPE
+hex0[1] <= Mux26.DB_MAX_OUTPUT_PORT_TYPE
+hex0[2] <= Mux25.DB_MAX_OUTPUT_PORT_TYPE
+hex0[3] <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
+hex0[4] <= Mux23.DB_MAX_OUTPUT_PORT_TYPE
+hex0[5] <= Mux22.DB_MAX_OUTPUT_PORT_TYPE
+hex0[6] <= Mux21.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|counter1:counter1_block
+clk_c1 => t_reg[0].CLK
+clk_c1 => t_reg[1].CLK
+clk_c1 => t_reg[2].CLK
+clk_c1 => t_reg[3].CLK
+clk_c1 => t_reg[4].CLK
+clk_c1 => t_reg[5].CLK
+clk_c1 => t_reg[6].CLK
+clk_c1 => t_reg[7].CLK
+clk_c1 => t_reg[8].CLK
+clk_c1 => t_reg[9].CLK
+clk_c1 => t_reg[10].CLK
+clk_c1 => t_reg[11].CLK
+clk_c1 => t_reg[12].CLK
+clk_c1 => t_reg[13].CLK
+clk_c1 => t_reg[14].CLK
+clk_c1 => t_reg[15].CLK
+clk_c1 => t_reg[16].CLK
+clk_c1 => t_reg[17].CLK
+clk_c1 => t_reg[18].CLK
+clk_c1 => t_reg[19].CLK
+clk_c1 => t_reg[20].CLK
+clk_c1 => t_reg[21].CLK
+clk_c1 => t_reg[22].CLK
+clk_c1 => t_reg[23].CLK
+clk_c1 => t_reg[24].CLK
+tick1_c1 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|counter2:counter2_block
+clk_c2 => d0_reg[0].CLK
+clk_c2 => d0_reg[1].CLK
+clk_c2 => d0_reg[2].CLK
+clk_c2 => d0_reg[3].CLK
+tick1_c2 => d0_next.OUTPUTSELECT
+tick1_c2 => d0_next.OUTPUTSELECT
+tick1_c2 => d0_next.OUTPUTSELECT
+tick1_c2 => d0_next.OUTPUTSELECT
+tick1_c2 => d0_next.IN1
+sp_c2[0] => Mux0.IN1
+sp_c2[1] => Mux0.IN0
+tick2_c2 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|counter3:counter3_block
+clk_c3 => dir1[0].CLK
+clk_c3 => dir1[1].CLK
+clk_c3 => dir1[2].CLK
+clk_c3 => bw_reg[0].CLK
+clk_c3 => bw_reg[1].CLK
+clk_c3 => bw_reg[2].CLK
+clk_c3 => fw_reg[0].CLK
+clk_c3 => fw_reg[1].CLK
+clk_c3 => fw_reg[2].CLK
+tick2_c3 => fw_next.IN1
+tick2_c3 => bw_next.IN1
+tick2_c3 => process_0.IN0
+tick2_c3 => bw_next.OUTPUTSELECT
+tick2_c3 => bw_next.OUTPUTSELECT
+tick2_c3 => bw_next.OUTPUTSELECT
+tick2_c3 => fw_next.OUTPUTSELECT
+tick2_c3 => fw_next.OUTPUTSELECT
+tick2_c3 => fw_next.OUTPUTSELECT
+cw_c3 => dir2[2].OUTPUTSELECT
+cw_c3 => dir2[1].OUTPUTSELECT
+cw_c3 => dir2[0].OUTPUTSELECT
+pa_c3 => process_0.IN1
+q[0] <= dir1[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dir1[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dir1[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

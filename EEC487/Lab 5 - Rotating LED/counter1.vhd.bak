@@ -1,0 +1,30 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.ALL; 
+
+ENTITY counter1 IS 
+	PORT(
+		clk, pa, cw: IN std_logic;
+		sp: IN std_logic_vector(1 DOWNTO 0);
+		tick1: OUT std_logic_vector(3 DOWNTO 0)
+	);
+END counter1;
+
+ARCHITECTURE counter1_arch OF counter1 IS
+	SIGNAL d0_reg, d0_next: std_logic_vector(3 DOWNTO 0); 
+	SIGNAL t_reg, t_next: std_logic_vector(24 DOWNTO 0); --adjust 50 MHz clock to 20, 40, 80, and 160 ms ticks
+	SIGNAL tick: std_logic; --count clock ticks
+
+	BEGIN
+  
+	PROCESS(clk)
+		BEGIN 
+			IF (clk'EVENT and clk='1') THEN
+				d0_reg <= d0_next;
+				t_reg <= t_next;
+			END IF;
+	END PROCESS;
+	
+	t_next <= (others => '0') when t_reg=4999999 else --goes up on 0.1 second ticks; 49999999 would be 1 second ticks
+				t_reg + 1;
+END counter1_arch;	

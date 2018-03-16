@@ -1,0 +1,43 @@
+--**********************************************************
+-- Experiment 5 - 4.4(b)
+--	Author: C. A. Snyder
+--			  M. Bbela
+--			  B. Rutledge
+--	
+--	File:	counter2.vhd
+--
+--	Design units:
+--		ENTITY decoder
+--		ARCHITECTURE decoder_arch
+--
+--	Purpose: generate the desired LED patterns 
+--
+--
+--	Library/Package:
+--		ieee.std_logic_1164
+--		ieee.std_logic_unsigned
+--
+--	Software/Version:
+--		Simulated by: Altera Quartus v13.0
+--		Synthesized by: Altera Quartus v13.0
+--
+--	Revisiom History:
+--		Version 1.0:
+--		Date: 10/13/2015
+--		Comments: Original
+--**********************************************************
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.ALL;
+
+ENTITY decoder IS 
+	PORT(
+		clk: IN std_logic;
+		hex3, hex2, hex1, hex0: OUT std_logic_vector(6 DOWNTO 0
+	);
+END decoder;
+
+ARCHITECTURE decoder_arch OF decoder IS
+
+END decoder_arch;

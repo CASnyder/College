@@ -1,0 +1,32 @@
+--**********************************************************
+-- Experiment 8 - 4.1(d)
+--	Author: C. A. Snyder
+--			  M. Bbela
+--			  B. Rutledge
+--	
+--	File:	reaction_fsm.vhd
+--
+--	Design units:
+--		ENTITY reaction_fsm
+--		ARCHITECTURE fsm_arch
+--
+--	Purpose: top level entity of zero counting circuit
+--				port maps everything else from the fsm block
+--				count the number of 0's in a 10-bit input
+--				we originally expected the circuit to require more
+--				separate vhdl files
+--
+--	Library/Package:
+--		ieee.std_logic_1164
+--		ieee.std_logic_unsigned
+--
+--
+--	Software/Version:
+--		Simulated by: Altera Quartus v13.0
+--		Synthesized by: Altera Quartus v13.0
+--
+--	Revisiom History:
+--		Version 1.0:
+--		Date: 11/05/2015
+--		Comments: Original
+--**********************************************************

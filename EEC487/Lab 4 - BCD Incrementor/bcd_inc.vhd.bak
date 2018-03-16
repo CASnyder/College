@@ -1,0 +1,51 @@
+--**********************************************************
+--
+--	Author: C. A. Snyder
+--			  M. Bbela
+--			  B. Rutledge
+--	
+--	File:	bcd_inc_.vhd
+--
+--	Design units:
+--		ENTITY bcd_inc
+--		ARCHITECTURE inc_arch
+--
+--	Purpose: Take 3 4-bit inputs in Binary-coded-decimal
+--		format and increment it by 1 and output the
+--		incremented number in 3 4-bit outputs
+--		
+--
+--	Library/Package:
+--		ieee.std_logic_1164
+--
+--	Software/Version:
+--		Simulated by: Altera Quartus v13.0
+--		Synthesized by: Altera Quartus v13.0
+--
+--	Revisiom History:
+--		Version 1.0:
+--		Date: 9/27/2015
+--		Comments: Original
+--**********************************************************
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY bcd_inc IS
+	PORT(
+		b2, b1, b0: IN std_logic_vector(3 downto 0);
+		y2, y1, y0: OUT std_logic_vector(3 downto 0)
+	);
+END bcd_inc;
+
+ARCHITECTURE inc_arch OF bcd_inc IS
+	
+	BEGIN
+		
+		with b0 select
+			y0 <= b0 + '1' when b0 < "1001" else
+					"0000";
+			y1 <= b1 + '1' when b0 = "1001" and b1 < "1001" else
+					b1;
+			y2 <= b2 + '1' b1 = "1001" and b2 < "1001" else
+					b2;
+END inc_arch;

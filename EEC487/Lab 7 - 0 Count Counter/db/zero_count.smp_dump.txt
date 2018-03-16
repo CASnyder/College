@@ -1,0 +1,6 @@
+
+State Machine - |zero_top|zero_fsm:fsm_block|state_reg
+Name state_reg.counting state_reg.idle state_reg.reset 
+state_reg.reset 0 0 0 
+state_reg.idle 0 1 1 
+state_reg.counting 1 0 1 

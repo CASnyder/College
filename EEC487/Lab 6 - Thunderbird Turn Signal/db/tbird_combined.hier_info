@@ -1,0 +1,76 @@
+|tbird_combined
+clk => tbird_counter:counter_block.counter_clk
+clk => tbird_fsm:fsm_block.fsm_clk
+reset => tbird_fsm:fsm_block.fsm_reset
+lft => tbird_fsm:fsm_block.fsm_left
+rt => tbird_fsm:fsm_block.fsm_right
+haz => tbird_fsm:fsm_block.fsm_haz
+light[0] <= tbird_fsm:fsm_block.fsm_light[0]
+light[1] <= tbird_fsm:fsm_block.fsm_light[1]
+light[2] <= tbird_fsm:fsm_block.fsm_light[2]
+light[3] <= tbird_fsm:fsm_block.fsm_light[3]
+light[4] <= tbird_fsm:fsm_block.fsm_light[4]
+light[5] <= tbird_fsm:fsm_block.fsm_light[5]
+
+
+|tbird_combined|tbird_counter:counter_block
+counter_clk => t_reg[0].CLK
+counter_clk => t_reg[1].CLK
+counter_clk => t_reg[2].CLK
+counter_clk => t_reg[3].CLK
+counter_clk => t_reg[4].CLK
+counter_clk => t_reg[5].CLK
+counter_clk => t_reg[6].CLK
+counter_clk => t_reg[7].CLK
+counter_clk => t_reg[8].CLK
+counter_clk => t_reg[9].CLK
+counter_clk => t_reg[10].CLK
+counter_clk => t_reg[11].CLK
+counter_clk => t_reg[12].CLK
+counter_clk => t_reg[13].CLK
+counter_clk => t_reg[14].CLK
+counter_clk => t_reg[15].CLK
+counter_clk => t_reg[16].CLK
+counter_clk => t_reg[17].CLK
+counter_clk => t_reg[18].CLK
+counter_clk => t_reg[19].CLK
+counter_clk => t_reg[20].CLK
+counter_clk => t_reg[21].CLK
+counter_clk => t_reg[22].CLK
+counter_clk => t_reg[23].CLK
+counter_clk => t_reg[24].CLK
+counter_tick <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tbird_combined|tbird_fsm:fsm_block
+fsm_clk => state_reg~1.DATAIN
+fsm_reset => state_reg~3.DATAIN
+fsm_tick => state_reg.s7.OUTPUTSELECT
+fsm_tick => state_reg.s6.OUTPUTSELECT
+fsm_tick => state_reg.s5.OUTPUTSELECT
+fsm_tick => state_reg.s4.OUTPUTSELECT
+fsm_tick => state_reg.s3.OUTPUTSELECT
+fsm_tick => state_reg.s2.OUTPUTSELECT
+fsm_tick => state_reg.s1.OUTPUTSELECT
+fsm_tick => state_reg.s0.OUTPUTSELECT
+fsm_left => state_next.s7.OUTPUTSELECT
+fsm_left => state_next.s6.IN1
+fsm_left => state_next.s4.OUTPUTSELECT
+fsm_left => state_next.s1.DATAA
+fsm_right => state_next.s6.IN0
+fsm_right => state_next.s4.DATAA
+fsm_right => state_next.s7.DATAA
+fsm_haz => state_next.s6.IN1
+fsm_haz => Selector8.IN4
+fsm_haz => Selector3.IN1
+fsm_haz => Selector4.IN1
+fsm_haz => Selector6.IN1
+fsm_haz => Selector1.IN1
+fsm_light[0] <= fsm_light.DB_MAX_OUTPUT_PORT_TYPE
+fsm_light[1] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+fsm_light[2] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+fsm_light[3] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+fsm_light[4] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+fsm_light[5] <= fsm_light.DB_MAX_OUTPUT_PORT_TYPE
+
+

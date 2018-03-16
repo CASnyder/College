@@ -1,0 +1,43 @@
+--**********************************************************
+-- Experiment 8 - 4.1(d)
+--	Author: C. A. Snyder
+--			  M. Bbela
+--			  B. Rutledge
+--	
+--	File:	reaction_count.vhd
+--
+--	Design units:
+--		ENTITY reaction_count
+--		ARCHITECTURE counter_arch
+--
+--	Purpose: count from 000 to 999 
+--
+--	Library/Package:
+--		ieee.std_logic_1164
+--		ieee.std_logic_unsigned
+--
+--
+--	Software/Version:
+--		Simulated by: Altera Quartus v13.0
+--		Synthesized by: Altera Quartus v13.0
+--
+--	Revisiom History:
+--		Version 1.0:
+--		Date: 11/10/2015
+--		Comments: Original
+--**********************************************************
+
+ENTITY reaction_count IS 
+	PORT( 
+		c_clk, c_clear, c_stop, c_start : IN std_logic;
+		
+	);
+END reaction_count;
+
+ARCHITECTURE counter_arch OF reaction_count IS
+	
+	BEGIN
+	
+	PROCESS(c_clk, c_clear, c_stop, c_start)
+
+END cheater_arch;
