@@ -4,8 +4,6 @@
 
 </div>
 
-
-## About
 A collection of projects from a few of my courses at Cleveland State University.  
 
 | Course | Semester    | Language | Requirements                              |
