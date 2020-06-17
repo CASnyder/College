@@ -8,4 +8,4 @@ This repo includes all the code my lab partners and I developed + turned in for 
 
 + All the work was done using Altera Quartus design software v 13 sp 1.
 + All VHDL was written for an Altera DE1 Board. 
-+ Any additional comments on my projects - comments from the professor, personal opinions on what I turned in, known errors - will be under separate readme's in the project
++ I should have used a .gitignore better back then to get around some of quartus's auto-generated files. 
