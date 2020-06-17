@@ -18,5 +18,4 @@ concept with XML and Data Warehouse concept.
 
 This repo includes everything I developed & turned in for CIS 430 during the Spring semester of 2017.
 
-* All work was done using Microsoft SQL Server 2014 Management Studio
-* Eventually I'll go through and add professor / TA comments to each project
+All work was done using Microsoft SQL Server 2014 Management Studio
